@@ -1,0 +1,15 @@
+/* Scoped to the homepage only: YouTube sets page-subtype="home" solely on
+   ytd-browse for youtube.com/. Search, watch, subscriptions, etc. are
+   untouched because this attribute never applies there. */
+
+ytd-browse[page-subtype="home"] {
+  background: #0f0f0f;
+  min-height: 100vh;
+}
+
+ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+ytd-browse[page-subtype="home"] ytd-rich-shelf-renderer,
+ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer,
+ytd-browse[page-subtype="home"] #chips-wrapper {
+  display: none;
+}
